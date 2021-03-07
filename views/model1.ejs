@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model 1</title>
+    <link rel="stylesheet" href="/styles/model1/styles.css">
+    <link rel="stylesheet" href="/styles/model1/navbar.css">
+    <link rel="stylesheet" href="/styles/model1/background.css">
+</head>
+
+
+<body>
+
+    <div class="navbar">
+        <a class="nav-item" href="/">
+            Home
+        </a>
+        <a class="nav-item" href="#">
+            Support
+        </a>
+        <a class="nav-item">Sign In</a>
+        <a class="nav-item">Sign Up</a>
+        <a class="nav-item">Contact Us</a>
+        <a class="nav-item">About Us</a>
+    </div>
+
+
+
+    <form action="/model1post" method="post">
+
+        <div class="container">
+
+            <!-- Forms to get 3 types of actors -->
+            <div class="actors">
+                <p>Simple Actors</p>
+                <input name="sa" type="number" min="0" value="1">
+                <p>Average Actors</p>
+                <input name="aa" type="number" min="0" value="1">
+                <p>Complex Actors</p>
+                <input name="ca" type="number" min="0" value="2">
+            </div>
+
+
+            <!-- Forms to get 3 types of actors -->
+            <div class="usecases">
+                <p>Simple Use Cases</p>
+                <input name="suc" type="number" min="0" value="6">
+                <p>Average Use Cases</p>
+                <input name="auc" type="number" min="0" value="10">
+                <p>Complex Use Cases</p>
+                <input name="cuc" type="number" min="0" value="15">
+            </div>
+            
+            <!-- Collecting technical factors -->
+
+            <div class="tfactors">
+                <p>Distributed System	</p>
+                <input type="number" min="0" max="5" value="0" name="t1">
+
+                <p>Response time or throughput performance objectives</p>
+                <input type="number" min="0" max="5" value="0" name="t2">
+                
+                <p>End user efficiency</p>
+                <input type="number" min="0" max="5" value="0" name="t3">
+                
+                <p>Complex internal processing	</p>
+                <input type="number" min="0" max="5" value="0" name="t4">
+                
+                <p>Code must be reusable	</p>
+                <input type="number" min="0" max="5" value="0" name="t5">
+                
+                <p>Easy to install	</p>
+                <input type="number" min="0" max="5" value="0" name="t6">
+                
+                <p>Easy to use	</p>
+                <input type="number" min="0" max="5" value="0" name="t7">
+                
+                <p>Portable</p>
+                <input type="number" min="0" max="5" value="0" name="t8">
+                
+                <p>Easy to change</p>
+                <input type="number" min="0" max="5" value="0" name="t9">
+                
+                <p>Concurrent</p>
+                <input type="number" min="0" max="5" value="0" name="t10">
+                
+                <p>Includes special security objectives</p>
+                <input type="number" min="0" max="5" value="0" name="t11">
+                
+                <p>Provides direct access for third parties</p>
+                <input type="number" min="0" max="5" value="0" name="t12">
+                
+                <p>Special user training facilities are required</p>
+                <input type="number" min="0" max="5" value="0" name="t13">
+                
+            </div>
+
+            <div class="efactors">
+                <p>Familiarity with development process used</p>
+                <input type="number" min="0" max="5" value="0" name="e1">
+                
+                <p>Application experience</p>
+                <input type="number" min="0" max="5" value="0" name="e2">
+                
+                <p>Object-oriented experience of team</p>
+                <input type="number" min="0" max="5" value="0" name="e3">
+                
+                <p>Lead analyst capability</p>
+                <input type="number" min="0" max="5" value="0" name="e4">
+                
+                <p>Motivation of the team</p>
+                <input type="number" min="0" max="5" value="0" name="e5">
+                
+                <p>Stability of requirements</p>
+                <input type="number" min="0" max="5" value="0" name="e6">
+                
+                <p>Part-time staff</p>
+                <input type="number" min="0" max="5" value="0" name="e7">
+                
+                <p>Difficult programming language</p>
+                <input type="number" min="0" max="5" value="0" name="e8">
+                
+            </div>
+
+            <div class="submit">
+                <button type="submit">Confirm Details</button>
+            </div>
+
+
+
+        </div>
+    </form>
+</body>
+
+</html>
