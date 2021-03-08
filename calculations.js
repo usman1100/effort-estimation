@@ -69,7 +69,11 @@ const UCP = (req) => {
     let tcf = 0.6 + 0.01 * TF;
     let ecf = 1.4 + -0.03 * EF;
 
-    return { uucp, uaw, uucw, ecf, tcf };
+    let effort = (uucp * tcf * ecf) * 20;
+
+    let project = [sa, aa, ca, uaw, suc, auc, cuc, uucw, tcf, ecf, effort]
+
+    return { uucp, uaw, uucw, ecf, tcf, project };
 };
 
 module.exports = { UCP };

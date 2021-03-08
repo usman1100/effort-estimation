@@ -25,7 +25,6 @@ app.get("/model1", (req, res)=>{
 })
 
 app.post("/model1post", (req, res)=>{
-    console.log(req.body);
     let data = calc.UCP(req.body);
     return res.json(data)
 })
