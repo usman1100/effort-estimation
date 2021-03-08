@@ -76,4 +76,11 @@ const UCP = (req) => {
     return { uucp, uaw, uucw, ecf, tcf, project };
 };
 
-module.exports = { UCP };
+const  eucDistance = (a, b) => {
+    return a
+        .map((x, i) => Math.abs( x - b[i] ) ** 2) // square the difference
+        .reduce((sum, now) => sum + now) // sum
+        ** (1/2)
+}
+
+module.exports = { UCP , eucDistance};
