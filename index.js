@@ -27,6 +27,7 @@ app.get("/model1", (req, res)=>{
 
 app.post("/model1post", (req, res)=>{
     let data = calc.UCP(req.body);
+    data.distances = calc.getNearestNeighbors(data.project);
     return res.json(data)
 })
 

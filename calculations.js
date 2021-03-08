@@ -83,4 +83,37 @@ const  eucDistance = (a, b) => {
         ** (1/2)
 }
 
-module.exports = { UCP , eucDistance};
+function dynamicSort(property) {
+    var sortOrder = 1;
+    if(property[0] === "-") {
+        sortOrder = -1;
+        property = property.substr(1);
+    }
+    return function (a,b) {
+        /* next line works with strings and numbers, 
+         * and you may want to customize it to your needs
+         */
+        var result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
+        return result * sortOrder;
+    }
+}
+
+const getNearestNeighbors = (target) => {
+    let data = require("./data");
+    let distances = []
+    for(let i=0; i<data.length; i++){
+
+        let item = {
+            "distance":eucDistance(target, data[i]),
+            "index":i
+        }
+
+        distances.push(item);
+    }
+
+    let sortedDistances = distances.sort(dynamicSort("distance"))
+
+    return sortedDistances;
+}
+
+module.exports = { UCP , getNearestNeighbors};
