@@ -97,6 +97,17 @@ button:hover{
     cursor: pointer;
 }
 
+.heading{
+    text-align: center;
+    font-size: 3rem;
+    transition: 0.1s;
+    cursor: pointer;
+
+}
+
+.heading:hover{
+    transform: scale(1.1);
+}
 
 
 @media (min-width: 320px) and (max-width: 480px){
