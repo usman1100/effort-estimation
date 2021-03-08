@@ -1,5 +1,5 @@
 const express = require("express");
-const bodyParser = require('body-parser');
+const morgan = require("morgan")
 const session = require("express-session")
 const calc = require("./calculations")
 
@@ -9,6 +9,7 @@ const port = 1313;
 
 
 // app.use(bodyParser.urlencoded({ extended: true }));
+app.use(morgan("dev"))
 app.use(express.urlencoded()); //Parse URL-encoded bodies
 app.use(express.static("public"));
 app.set('view engine', 'ejs');

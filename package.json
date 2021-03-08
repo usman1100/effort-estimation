@@ -13,6 +13,7 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
+    "morgan": "^1.10.0",
     "node-ejs": "^1.2.3"
   }
 }
