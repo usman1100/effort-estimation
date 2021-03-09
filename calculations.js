@@ -71,25 +71,27 @@ const UCP = (req) => {
 
     let effort = (uucp * tcf * ecf) * 20;
 
-    let project = [sa, aa, ca, uaw, suc, auc, cuc, uucw, tcf, ecf, effort]
+    let projectAttributes = [sa, aa, ca, uaw, suc, auc, cuc, uucw, tcf, ecf, effort]
 
-    return { uucp, uaw, uucw, ecf, tcf, project };
+    let ucpDetails = { sa, aa, ca, uaw, suc, auc, cuc, uucw, tcf, ecf, effort }
+
+    return { uucp, uaw, uucw, ecf, tcf, projectAttributes, effort, ucpDetails };
 };
 
-const  eucDistance = (a, b) => {
+const eucDistance = (a, b) => {
     return a
-        .map((x, i) => Math.abs( x - b[i] ) ** 2) // square the difference
+        .map((x, i) => Math.abs(x - b[i]) ** 2) // square the difference
         .reduce((sum, now) => sum + now) // sum
-        ** (1/2)
+        ** (1 / 2)
 }
 
 function dynamicSort(property) {
     var sortOrder = 1;
-    if(property[0] === "-") {
+    if (property[0] === "-") {
         sortOrder = -1;
         property = property.substr(1);
     }
-    return function (a,b) {
+    return function (a, b) {
         /* next line works with strings and numbers, 
          * and you may want to customize it to your needs
          */
@@ -98,14 +100,14 @@ function dynamicSort(property) {
     }
 }
 
-const getNearestNeighbors = (target) => {
+const getNearestNeighbors = (target, k = 3) => {
     let data = require("./data");
     let distances = []
-    for(let i=0; i<data.length; i++){
+    for (let i = 0; i < data.length; i++) {
 
         let item = {
-            "distance":eucDistance(target, data[i]),
-            "index":i
+            "distance": eucDistance(target, data[i]),
+            "index": i
         }
 
         distances.push(item);
@@ -113,7 +115,7 @@ const getNearestNeighbors = (target) => {
 
     let sortedDistances = distances.sort(dynamicSort("distance"))
 
-    return sortedDistances;
+    return sortedDistances.slice(1, k + 1);
 }
 
-module.exports = { UCP , getNearestNeighbors};
+module.exports = { UCP, getNearestNeighbors };
