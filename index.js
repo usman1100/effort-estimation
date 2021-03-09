@@ -38,6 +38,14 @@ app.post("/model1post", (req, res)=>{
     return res.json(data)
 })
 
+
+app.get("/details",(req, res)=>{
+
+    return res.render("details.ejs", {"data":req.session.ucpDetails})
+
+})
+
+
 app.get("/sus",(req, res)=>{
     if(!req.session.view) req.session.view=1;
     else req.session.view+=1;
