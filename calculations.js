@@ -75,7 +75,7 @@ const UCP = (req) => {
 
     let ucpDetails = { sa, aa, ca, uaw, suc, auc, cuc, uucw, tcf, ecf, effort }
 
-    return { uucp, uaw, uucw, ecf, tcf, projectAttributes, effort, ucpDetails };
+    return { projectAttributes, effort, ucpDetails };
 };
 
 const eucDistance = (a, b) => {
