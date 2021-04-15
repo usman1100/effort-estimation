@@ -1,0 +1,26 @@
+.container{
+
+    margin-top: 5%;
+    padding: 3%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    align-items: center;
+    text-align: center;
+
+    row-gap: 4%;
+    column-gap: 3%;
+}
+
+.container div{
+    border: 2px solid black;
+}
+
+.ecf{
+    grid-column: 1/4;
+}
+
+.tcf{
+    grid-column: 1/4;
+}

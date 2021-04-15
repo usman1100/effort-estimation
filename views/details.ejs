@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Details</title>
     <link rel="stylesheet" href="/styles/details/navbar.css">
+    <link rel="stylesheet" href="/styles/details/styles.css">
 </head>
 
 <body>
@@ -20,7 +21,51 @@
         <% } else{ %>
             <div class="container">
 
+                <div>
+                    <h1>Simple Actors</h1>
+                    <h3> <%= data.sa %> </h3>
+                </div>
+
+                <div>
+
+                    <h1>Averge Actors</h1>
+                    <h3> <%= data.aa %> </h3>
+                </div>
+
                 
+                <div>
+                    <h1>Complex Actors</h1>
+                    <h3> <%= data.ca %> </h3>
+                </div>
+
+
+                <div>
+                    <h1>Simple Use Cases</h1>
+                    <h3> <%= data.suc %> </h3>
+                </div>
+
+                <div>
+
+                    <h1>Averge Use Cases</h1>
+                    <h3> <%= data.auc %> </h3>
+                </div>
+
+                
+                <div>
+                    <h1>Complex Use Cases</h1>
+                    <h3> <%= data.cuc %> </h3>
+                </div>
+
+                <div class="ecf">
+                    <h1>Environmental Complexity Factors</h1>
+                    <h3> <%= data.ecf %> </h3>
+                </div>
+
+                
+                <div  class="tcf">
+                    <h1>Technical Complexity Factors</h1>
+                    <h3> <%= data.tcf %> </h3>
+                </div>
 
 
             </div>

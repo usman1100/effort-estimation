@@ -35,13 +35,13 @@ app.post("/model1post", (req, res)=>{
 
 
     data.distances = calc.getNearestNeighbors(data.projectAttributes);
-    return res.json(data)
+    return res.redirect("/details")
 })
 
 
 app.get("/details",(req, res)=>{
-
-    return res.render("details.ejs", {"data":req.session.ucpDetails})
+    console.log(req.session.ucpDetails);
+    return res.render("details.ejs", {data:req.session.ucpDetails})
 
 })
 
