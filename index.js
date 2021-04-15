@@ -46,12 +46,6 @@ app.get("/details",(req, res)=>{
 })
 
 
-app.get("/sus",(req, res)=>{
-    if(!req.session.view) req.session.view=1;
-    else req.session.view+=1;
-    res.json(req.session.view)
-})
-
 
 app.listen(port, ()=>{
     console.log(`Listening on localhost:${port}`);
