@@ -34,16 +34,17 @@ app.post("/model1post", (req, res)=>{
     req.session.projectAttributes = data.projectAttributes;
 
 
-    data.distances = calc.getNearestNeighbors(data.projectAttributes);
+    req.session.distances = calc.getNearestNeighbors(data.projectAttributes);
     return res.redirect("/details")
 })
 
 
 app.get("/details",(req, res)=>{
-    console.log(req.session.ucpDetails);
     return res.render("details.ejs", {data:req.session.ucpDetails})
 
 })
+
+
 
 
 
@@ -51,4 +52,3 @@ app.listen(port, ()=>{
     console.log(`Listening on http://localhost:${port}`);
 })
 
-// just testing git push
