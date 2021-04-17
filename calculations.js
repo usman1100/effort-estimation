@@ -107,7 +107,8 @@ const getNearestNeighbors = (target, k = 3) => {
 
         let item = {
             "distance": eucDistance(target, data[i]),
-            "index": i
+            "index": i,
+            "effort":data[i][10]
         }
 
         distances.push(item);
@@ -115,7 +116,21 @@ const getNearestNeighbors = (target, k = 3) => {
 
     let sortedDistances = distances.sort(dynamicSort("distance"))
 
-    return sortedDistances.slice(1, k + 1);
+    // slicing the list from 1 to "k" + 1 because
+    // 0th item in the list will have 0 distance
+    // and k+1 because we want to get k items
+    // but have to go one item further becuase
+    // one item was skipped
+    let kSmallestDistances = sortedDistances.slice(1, k + 1);
+
+    let sum = 0;
+
+    for (let i = 0; i < kSmallestDistances.length; i++) {
+        sum += kSmallestDistances[i]["effort"];
+    }
+
+    return sum/3;
+
 }
 
 module.exports = { UCP, getNearestNeighbors };
