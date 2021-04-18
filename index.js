@@ -5,7 +5,7 @@ const calc = require("./calculations")
 
 
 const app = express();
-const port = 1313;
+const port = process.env.PORT || 1313;
 
 
 // app.use(bodyParser.urlencoded({ extended: true }));
