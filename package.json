@@ -15,5 +15,8 @@
     "express-session": "^1.17.1",
     "morgan": "^1.10.0",
     "node-ejs": "^1.2.3"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }
