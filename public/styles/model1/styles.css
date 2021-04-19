@@ -86,8 +86,7 @@ body{
 }
 
 button{
-    width: 150px;
-    height: 60px;
+    padding: 2%;
     border: 2px solid black;
     background-color: rgb(255, 255, 255, 0);
     font-size: 1.3rem;
