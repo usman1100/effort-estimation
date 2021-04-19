@@ -31,7 +31,6 @@ app.post("/model1post", (req, res)=>{
 
     req.session.effort1 = data.effort;
     req.session.ucpDetails = data.ucpDetails;
-    req.session.projectAttributes = data.projectAttributes;
 
 
     req.session.effort3 = calc.getNearestNeighbors(data.projectAttributes);
